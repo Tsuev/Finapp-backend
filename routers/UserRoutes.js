@@ -1,8 +1,7 @@
 import { Router } from "express";
 import { addUsers, getUsers } from "../controllers/UserController.js";
-import dbStart from '../db/db.js';
 
-dbStart();
+
 const router = Router();
 
 router.get('/', getUsers);

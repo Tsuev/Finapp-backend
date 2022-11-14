@@ -1,7 +1,10 @@
 import User from "../models/UsersModel.js";
 
 export async function getUsers(req, res) {
-    res.json(await User.find());
+
+    let user = await User.find()
+    console.log(user);
+    res.json({})
 }
 
 export async function addUsers(req, res) {
