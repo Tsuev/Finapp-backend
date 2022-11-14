@@ -1,11 +1,11 @@
 import Express, { json } from "express";
+import cors from "cors";
 import UsersRoutes from './routers/UserRoutes.js'
 
 const PORT = process.env.PORT || 5000;
 const app = Express();
 
-console.log('dfddd')
-
+app.use(cors())
 app.use(Express.json());
 app.use('/api/users', UsersRoutes)
 
