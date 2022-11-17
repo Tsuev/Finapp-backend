@@ -1,11 +1,8 @@
-import mongoose from 'mongoose';
-import dbStart from './db/db.js';
-import Payment from './models/PaymentModel.js'
-import User from './models/UsersModel.js'
-dbStart();
+import Payment from '../models/PaymentModel.js'
+import User from '../models/UsersModel.js'
 
 
-async function getSome() {
+async function generateUsers() {
 
     function getYearAndMonth(date) {
         return `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}`
@@ -39,10 +36,8 @@ async function getSome() {
         users.push(userDate)
     })
 
-
-    console.log(users);
+    return users;
 
 }
 
-getSome();
-
+export default generateUsers;

@@ -11,9 +11,9 @@ const app = Express();
 
 app.use(cors())
 app.use(Express.json());
-app.use('/api/users', UsersRoutes)
+app.use('/api/', UsersRoutes)
 app.use('/api/', PaymentRoutes)
 
 app.listen(PORT, ()=> {
-    console.log('server runing');
+    console.log('server running');
 })
