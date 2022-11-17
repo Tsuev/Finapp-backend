@@ -4,14 +4,14 @@ import Payment from './models/PaymentModel.js'
 import User from './models/UsersModel.js'
 dbStart();
 
+function getYearAndMonth(date) {
+    return `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}`
+}
 
+let currentDate = getYearAndMonth(new Date());
 async function getSome() {
 
-    function getYearAndMonth(date) {
-        return `${date.getUTCFullYear()}-${date.getUTCMonth() + 1}`
-    }
 
-    let currentDate = getYearAndMonth(new Date());
     let userCollection = await User.find()
     let payment = await Payment.find();
     let users = []
@@ -40,7 +40,7 @@ async function getSome() {
     })
 
 
-    console.log(users);
+    console.log(currentDate);
 
 }
 
