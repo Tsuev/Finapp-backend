@@ -10,5 +10,5 @@ export async function addPayment(req, res) {
         await Payment.create({sum: 500, userId: el})
     }
 
-    res.json({message: 'Дынные добавленны'});
+    res.json({message: 'Данные добавленны'});
 }

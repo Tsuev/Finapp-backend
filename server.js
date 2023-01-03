@@ -17,6 +17,6 @@ app.use('/api/', PaymentRoutes);
 app.use('/api/', StatisticRoutes);
 
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
     console.log('server running');
 })
